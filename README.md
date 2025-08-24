@@ -76,6 +76,26 @@ npm run build
 yarn build
 ```
 
+## 🚀 Deploy to Vercel
+
+### Option 1: Deploy via Vercel Dashboard
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "New Project"
+4. Import your GitHub repository
+5. Vercel will automatically detect it's a Create React App
+6. Click "Deploy"
+
+### Option 2: Deploy via Vercel CLI
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in your project directory
+3. Follow the prompts to deploy
+
+### Option 3: One-Click Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/luxstay-hotel-booking)
+
+**Note**: The project is configured with `vercel.json` for optimal deployment settings.
+
 ## 🛠️ Tech Stack
 
 ### Frontend
