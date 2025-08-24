@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Ultra-modern hotel booking website with 3D effects, AI features, and immersive UI"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>LuxStay - Ultra-Modern Hotel Booking</title>
+    
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Loading animation */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-screen.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading screen when page loads
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.classList.add('fade-out');
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }
+      });
+    </script>
+  </body>
+</html>
