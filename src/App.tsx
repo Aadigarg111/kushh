@@ -18,8 +18,8 @@ import BookingsPage from './pages/BookingsPage';
 import ProfilePage from './pages/ProfilePage';
 import SearchPage from './pages/SearchPage';
 
-// 3D Components
-import Globe3D from './components/3d/Globe3D';
+// 3D Components - temporarily disabled for deployment
+// import Globe3D from './components/3d/Globe3D';
 
 const App: React.FC = () => {
   const { isDarkMode } = useThemeStore();
@@ -55,10 +55,10 @@ const App: React.FC = () => {
         ? 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900' 
         : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'
     }`}>
-      {/* 3D Background Globe */}
-      <div className="fixed inset-0 pointer-events-none z-0">
+      {/* 3D Background Globe - temporarily disabled for deployment */}
+      {/* <div className="fixed inset-0 pointer-events-none z-0">
         <Globe3D />
-      </div>
+      </div> */}
 
       {/* Main Layout */}
       <div className="relative z-10">
